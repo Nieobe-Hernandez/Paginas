@@ -161,10 +161,9 @@
     <img src="https://m.media-amazon.com/images/M/MV5BOTc3YmM3N2QtODZkMC00ZDE5LThjMTQtYTljN2Y1YTYwYWJkXkEyXkFqcGdeQXVyODEzNjM5OTQ@._V1_.jpg" alt="Ponyo">
     <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/597777fd-3ab0-4ee2-bba9-a68a67f4befa/d9jyfj5-d9e67b5f-3c41-48ef-8996-a84cdd01b948.jpg/v1/fill/w_1600,h_2286,q_75,strp/poster_mi_vecino_totoro__personaje_1_by_vind7_d9jyfj5-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MjI4NiIsInBhdGgiOiJcL2ZcLzU5Nzc3N2ZkLTNhYjAtNGVlMi1iYmE5LWE2OGE2N2Y0YmVmYVwvZDlqeWZqNS1kOWU2N2I1Zi0zYzQxLTQ4ZWYtODk5Ni1hODRjZGQwMWI5NDguanBnIiwid2lkdGgiOiI8PTE2MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.Ity7JcaVQCwtCK2VZU5rA6jIrVw28d9LM-RtHbFs89o" alt="Mi vecino Totoro">
     <img src="https://static.wikia.nocookie.net/doblaje/images/2/2c/KIKI%2C_ENTREGAS_A_DOMICILIO.jpg/revision/latest?cb=20230102183058&path-prefix=es" alt="Kiki Entregas a domicilio">
-    <img src="https://static.wikia.nocookie.net/doblaje/images/2/2c/KIKI,_ENTREGAS_A_DOMICILIO.jpg/revision/latest?cb=20230102183058&path-prefix=es" alt="">
+    <img src="https://www.themoviedb.org/t/p/original/6o2F1HwP1zkNGsXepwCnXGhKx2d.jpg" alt="Kiki entregas a domicilio img2">
     <img src="https://es.web.img3.acsta.net/medias/nmedia/18/84/87/96/19769123.jpg" alt="Arriety">
-    <img src="https://static.wikia.nocookie.net/studioghibli/images/d/d8/El_castillo_ambulante_portada_ESP.jpg/revision/latest?cb=20200706151536&path-prefix=es" alt="El increible castillo Ambulante">
-    <img src="https://static.wikia.nocookie.net/studioghibli/images/d/d8/El_castillo_ambulante_portada_ESP.jpg/revision/latest?cb=20200706151536&path-prefix=es" alt="">
+    <img src="https://www.themoviedb.org/t/p/original/55vk1IvsUYjVdaxytFqwTIZeJT8.jpg" alt="El increible castillo Ambulante">
 </section>
 
 <div class="cont">
@@ -199,23 +198,38 @@
     </div>
 
     <div>
-        <script>function cambiarImagen(nuevaImagen) {
-            const imagen = document.getElementById("imagen");
-            imagen.src = nuevaImagen;
-          }
-          
-          function restaurarImagen() {
-            const imagen = document.getElementById("imagen");
-            imagen.src = "https://static1.srcdn.com/wordpress/wp-content/uploads/2021/09/Sophie-Calcifer-1.jpg";
-          }
-          </script>
-          <div class="fondo">
-        <br>
-          <img id="imagen" src="https://static1.srcdn.com/wordpress/wp-content/uploads/2021/09/Sophie-Calcifer-1.jpg" alt="Imagen original">
-          <button onclick="cambiarImagen('https://img2.rtve.es/imagenes/fotograma-castillo-ambulantte/1593422095076.jpg')">Cambiar Imagen</button>
-          <button onclick="restaurarImagen()">Restaurar Imagen</button>
-        </div>     
+        <script>
+            var img = [
+                'https://static1.srcdn.com/wordpress/wp-content/uploads/2021/09/Sophie-Calcifer-1.jpg',
+                'https://i0.wp.com/auralcrave.com/wp-content/uploads/2018/02/MV5BMTkyNTExOTM2OV5BMl5BanBnXkFtZTcwNTk1NzEyNw@@._V1_SX1777_CR001777934_AL_.jpeg?w=700&ssl=1',
+                'https://pbs.twimg.com/media/EYpgm7aWsAERyDQ.jpg',
+                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQeKrqzPfbfS2I04TT4oXG1FJ8rAlKzWaHHMtkALlldOl0uMoxlPybc7ZXO5Tn_YpGiA2c&usqp=CAU',
+                'https://i.ytimg.com/vi/QpH1ioVSceo/maxresdefault.jpg',
+                'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhDHQf5d9FKT6DlQ4rAXLfgxrySCTJGdDBkgYWfhkREKHhR3NTA97IGXEZKkKDUtumrh3u0AO9qJ5QpRdbuCOWOmpjifHYpRyoLcCDRJXYpT7xtTuRY7wPqnntu5MxYNQbcE2Q9DVoJykk4HfWVImLFr2E40njtBwBB3OvihGABmULLOoVDqlM61N-HDg/s800/castillo-vagabundo.jpg',
+                'https://pa1.narvii.com/6068/011fa7f428720a00411332a4192aab92d2942028_hq.gif',
+                'https://ramenparados.com/wp-content/uploads/2022/05/c0679.0220-1024x554.jpg'
+            ];
+            var posicion = 0;
+    
+            function cambiarImg(direction) {
+                if (direction === 'sig') {
+                    posicion = (posicion + 1) % img.length;
+                } else {
+                    posicion = (posicion - 1 + img.length) % img.length;
+                }
+    
+                var elemento = document.getElementById('elemento');
+                elemento.src = img[posicion];
+            }
+        </script>
     </div>
+    <br>
+    <img id="elemento" src="" alt="Imagen" width="400">
+    <br>
+    <div class="fondo">
+        
+     <button  onclick="cambiarImg('anter')">Anterior</button><button onclick="cambiarImg('sig')">Siguiente</button>
+</div>
 
     <div class="fondo">
         <script>function ocultarMensaje() {
