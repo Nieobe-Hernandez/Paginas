@@ -95,16 +95,51 @@
         top: 800px;
     }
     #imagen {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
     }
+    .fondo button{
+            margin-top: 10px;
+            font-weight: 700;
+            color: #d5d5ee;
+            padding: 9px 25px;
+           background-image: linear-gradient(to right, #f19012bd 2%, #53c032d0 100%);
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease 0;
+
+        }
+        .fondo button:hover{
+            color:#f8f8f8 ;
+            transform: scale(1.3);
+
+        }
       </style>
-  <header class="header";">     
+  <header class="header";">    
+    <div> <script>
+        const imagenesDeFondo = [
+           "https://fondosmil.com/fondo/113296.jpg",
+           "https://image.tmdb.org/t/p/original/vwBa7djy1oxfxUjc7YtVgGNsjrT.jpg",
+           "https://cinemasaturno.com/wp-content/uploads/2021/06/castillo-vagabundo-cover.jpg",
+           "https://images8.alphacoders.com/105/thumb-1920-1053126.jpg",
+           "https://i0.wp.com/listadeanime.com/wp-content/uploads/2020/11/el-castillo-ambulante-edicion-deluxe-original.jpg?fit=1920%2C1080&ssl=1",
+           "https://www.themoviedb.org/t/p/original/bNYDRRgmKogbPjhsR0PTPkqITnh.jpg"
+         ];
+     
+         function cambiarFondo() {
+           const indiceAleatorio = Math.floor(Math.random() * imagenesDeFondo.length);
+           const nuevaImagen = imagenesDeFondo[indiceAleatorio];
+           document.body.style.backgroundImage = `url('${nuevaImagen}')`;
+         }
+       </script>
         <div class="icon">
             <a href="index.html"><i class="bi bi-caret-left-fill"></i></a> 
         </div>           
         <div ></div>
-            <h2>Studio Ghibli Films</h2>  
+        <div class="fondo">
+            <button id="cambiarImagen" onclick="cambiarFondo()">Cambiar Fondo</button> </div>
+           </div> <h2>Studio Ghibli Films</h2>  
     </header>
         <title>Studio Ghibli Films</title>
     </head>
@@ -150,29 +185,13 @@
 </div>
 </div>
 <div class="boton"> <center>
-<div> <script>
-    const imagenesDeFondo = [
-      "https://fondosmil.com/fondo/113296.jpg",
-      "https://image.tmdb.org/t/p/original/vwBa7djy1oxfxUjc7YtVgGNsjrT.jpg",
-      "https://cinemasaturno.com/wp-content/uploads/2021/06/castillo-vagabundo-cover.jpg",
-      "https://images8.alphacoders.com/105/thumb-1920-1053126.jpg"
-    ];
-
-    function cambiarFondo() {
-      const indiceAleatorio = Math.floor(Math.random() * imagenesDeFondo.length);
-      const nuevaImagen = imagenesDeFondo[indiceAleatorio];
-      document.body.style.backgroundImage = `url('${nuevaImagen}')`;
-    }
-  </script> <button id="cambiarImagen" onclick="cambiarFondo()">Cambiar Fondo</button> 
-  </div>
-
     <div><script> function cambiarTexto() {
         const elemento = document.getElementById("texto");
         elemento.textContent = "pues sigue queriendo...";
       }
-      </script>
+      </script><div class="fondo">
        <br><p id="texto"><strong>¿Quieres ver como cambia mi texto?</strong></p> 
-<button onclick="cambiarTexto()">Cambiar Texto</button>
+<button onclick="cambiarTexto()">Cambiar Texto</button></div>
     </div>
 
     <div>
@@ -186,13 +205,15 @@
             imagen.src = "https://static1.srcdn.com/wordpress/wp-content/uploads/2021/09/Sophie-Calcifer-1.jpg";
           }
           </script>
-          <br>
+          <div class="fondo">
+        <br>
           <img id="imagen" src="https://static1.srcdn.com/wordpress/wp-content/uploads/2021/09/Sophie-Calcifer-1.jpg" alt="Imagen original">
           <button onclick="cambiarImagen('https://img2.rtve.es/imagenes/fotograma-castillo-ambulantte/1593422095076.jpg')">Cambiar Imagen</button>
-          <button onclick="restaurarImagen()">Restaurar Imagen</button>          
+          <button onclick="restaurarImagen()">Restaurar Imagen</button>
+        </div>     
     </div>
 
-    <div>
+    <div class="fondo">
         <script>function ocultarMensaje() {
             const mensaje = document.getElementById("mensaje");
             mensaje.style.display = "none";
@@ -202,7 +223,7 @@
         <button onclick="ocultarMensaje()">Ocultar Mensaje</button>        
     </div>
 
-    <div>
+    <div class="fondo">
         <script>function escribirTexto() {
             const div = document.getElementById("miDiv");
             const h1 = document.createElement("h1");
